@@ -35,11 +35,15 @@ open-source, released under the GPL license.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(scigraphica):command="scigraphica" icon="%{name}.png" \
-                 needs="X11" section="Applications/Sciences/Other" title="SciGraphica" \
-                 longtitle="Data Plotting and Visualization"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=scigraphica
+Icon=%{name}
+Categories=Science;
+Name=SciGraphica
+Comment=Data Plotting and Visualization
 EOF
 
 install -d $RPM_BUILD_ROOT{%{_liconsdir},%{_miconsdir}}
@@ -62,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog TODO examples/*.sg examples/*.dat
 %{_bindir}/*
 %{_datadir}/pixmaps/*
-%{_menudir}/*
+%{_datadir}/applications/mandriva-*.desktop
 %{_datadir}/%{name}
 %{_datadir}/gnome/apps/Applications/*
 %{_datadir}/gnome/help/%{name}
