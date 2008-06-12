@@ -52,11 +52,15 @@ convert pixmaps/sg_icon.xpm -size 32x32 $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 convert pixmaps/sg_icon.xpm -size 48x48 $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
