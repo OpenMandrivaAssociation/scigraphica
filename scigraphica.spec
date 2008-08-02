@@ -1,6 +1,6 @@
 %define	name	scigraphica
 %define	version	2.1.0
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 
 Name:		%{name}
 Summary:	Data analysis and technical graphics
