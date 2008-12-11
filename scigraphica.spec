@@ -11,7 +11,7 @@ Group:		Sciences/Other
 Source0:	%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildrequires:	libgtk+extra-2-devel >= 2.0.0
-Buildrequires:	termcap-devel ImageMagick 
+Buildrequires:	termcap-devel imagemagick 
 Buildrequires:	readline-devel libscigraphica-devel
 Buildrequires:	python-numarray-devel python-numeric-devel
 Url:		http://scigraphica.sourceforge.net/
