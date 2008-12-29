@@ -28,7 +28,7 @@ open-source, released under the GPL license.
 %setup -q
 
 %build
-%configure --with-python-numeric-path=/usr/include/python2.5/Numeric/ --disable-imlib
+%configure2_5x --with-python-numeric-path=%{_includedir}/python%{py_ver}/Numeric/ --disable-imlib
 %make
 
 %install
