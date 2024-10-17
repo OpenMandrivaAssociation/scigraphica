@@ -14,7 +14,7 @@ Buildrequires:	libgtk+extra-2-devel >= 2.0.0
 Buildrequires:	termcap-devel imagemagick 
 Buildrequires:	readline-devel libscigraphica-devel
 Buildrequires:	python-numarray-devel python-numeric-devel
-Url:		http://scigraphica.sourceforge.net/
+Url:		https://scigraphica.sourceforge.net/
 
 %description
 SciGraphica is a scientific application for data analysis and technical 
