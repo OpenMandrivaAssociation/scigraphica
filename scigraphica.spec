@@ -10,6 +10,11 @@ License:	GPL
 Group:		Sciences/Other
 Source0:	%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	libgtk+extra-2-devel >= 2.0.0
 Buildrequires:	termcap-devel imagemagick 
 Buildrequires:	readline-devel libscigraphica-devel
